@@ -25,5 +25,9 @@ def result():
         return render_template("result.html", result=test_result, name=name, year=year, month=month, day=day)
 
 
+@app.route('/save', methods=['POST', 'GET'])
+def save():
+    if request.method == 'POST':
+
 if __name__ == '__main__':
     app.run(debug=True)
